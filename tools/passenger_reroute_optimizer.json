@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "passenger_reroute_optimizer",
+  "description": "Evaluates candidate rebooking flights to ensure departure within 12 hours of canceled flight",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "rebooking_data_json": {
+        "type": "string",
+        "description": "JSON string containing candidate_departure_offset_hours"
+      }
+    },
+    "required": [
+      "rebooking_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}

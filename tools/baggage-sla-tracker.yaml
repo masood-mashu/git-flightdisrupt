@@ -1,0 +1,18 @@
+name: baggage-sla-tracker
+version: 1.0.0
+description: "Tracks delayed baggage transit days against Montreal Convention compensation threshold"
+input_schema:
+  type: object
+  properties:
+    delayed_days:
+      type: string
+      description: "Number of days baggage has been delayed in transit"
+  required:
+    - delayed_days
+implementation:
+  type: script
+  path: baggage_sla_tracker.py
+  runtime: python3
+annotations:
+  read_only: true
+  idempotent: true

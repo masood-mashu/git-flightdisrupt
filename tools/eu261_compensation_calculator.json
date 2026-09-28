@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "name": "eu261_compensation_calculator",
+  "description": "Calculates EU261 statutory compensation eligibility in Euros based on flight distance and delay duration",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "delay_data_json": {
+        "type": "string",
+        "description": "JSON string containing delay_minutes, distance_km, and extraordinary_circumstance (bool)"
+      }
+    },
+    "required": [
+      "delay_data_json"
+    ]
+  },
+  "returns": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      }
+    }
+  }
+}
